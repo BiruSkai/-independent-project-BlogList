@@ -1,30 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Capstone Project</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="styles/index.css">
 
-<div class="smartphone_headerContainer">
-   <div class="firstRowHeader">
-      <div class="headerTitle">Capstone Project</div>
-      <form class="searchBarContainer">
-         <input type="search" placeholder="Search blog...." class="form-control">
-         <button><i class="bi bi-search"></i></button>
-      </form>
-   </div>  
-   <ul class="secondRowHeader">
-      <li class="headerListItem"><a href="/index.ejs"><i class="bi bi-house-fill homeIcon"></i></a></li>
-      <li class="headerListItem"><a href="/view_blogs.ejs"></a><i class="bi bi-book-fill"></i></li></li>
-      <li class="headerListItem"><a href="/write_blog.ejs"></a><i class="bi bi-pen-fill"></i></li></li>
-   </ul>
-</div>
-
-
-<div class="tablet_headerContainer">
-     <div class="headerTitle">Capstone Project</div>
-     <form class="searchBarContainer">
-         <input type="search" placeholder="Search blog...." class="form-control">
-         <button id="magnifyGlassIcon"><i class="bi bi-search"></i></button>
-     </form>
-     
-     <ul class="headerListContainer">
-        <li class="headerListItem">Home</li>
-        <li class="headerListItem">View Blogs</li>
-        <li class="headerListItem">Create Blog</li>
-     </ul>
-</div>
+</head>
+<body>
+   <header>
+      <!-- smartphone's header -->
+      <div class="smartphone_headerContainer">
+         <div class="firstRowHeader">
+            <div class="headerTitle">Capstone Project</div>
+            <form class="searchBarContainer">
+               <input type="search" placeholder="Search blog...." class="form-control">
+               <button><i class="bi bi-search"></i></button>
+            </form>
+         </div>  
+         <ul class="secondRowHeader">
+            <li class="headerListItem"><a href="/"><i class="bi bi-house-fill navIcon"></i></a></li>
+            <li class="headerListItem"><a href="/view_blogs"><i class="bi bi-book-fill navIcon"></i></a></li>
+            <li class="headerListItem"><a href="/write_blog"><i class="bi bi-pen-fill navIcon"></i></a></li>
+         </ul>
+      </div>
+      <!-- tablet's header and upwards -->
+      <div class="tablet_headerContainer">
+         <div class="headerTitle">Capstone Project</div>
+         <form class="searchBarContainer">
+               <input type="search" placeholder="Search blog...." class="form-control">
+               <button id="magnifyGlassIcon"><i class="bi bi-search"></i></button>
+         </form>
+         
+         <ul class="headerListContainer">
+            <li class="headerListItem navIcon"><a href="/">Home</a></li>
+            <li class="headerListItem navIcon"><a href="/view_blogs">View Blogs</a></li>
+            <li class="headerListItem navIcon"><a href="/write_blog">Write Blog</a></li>
+         </ul>
+      </div>
+   </header>

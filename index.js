@@ -13,10 +13,14 @@ app.get("/", (req, res) => {
 })
 
 app.get("/view_blogs", (req, res) => {
-        res.send("view blogs")
+        res.render("view_blogs.ejs")
 })
 
-app.post("/create_blogs", (req, res) => {
+app.get("/write_blog", (req, res) => {
+        res.render("write_blog.ejs")
+})
+
+app.post("/write_blog", (req, res) => {
         res.send("Create Blog")
 })
 
