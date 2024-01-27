@@ -10,7 +10,7 @@ header, body, footer{
         position:fixed;
         display:block;
         width: 100%;
-        border-bottom: 1px solid black;
+        /* border-bottom: 1px solid black; */
         padding: 20px auto;
         height:fit-content;
         top:0px;
@@ -22,7 +22,7 @@ header, body, footer{
         align-items: center;
         justify-content: center;
         padding:10px 5px;
-        border-bottom:1px solid black;
+        /* border-bottom:1px solid black; */
         >.headerTitle{
                 flex:1;
                 margin-left: 10px;
@@ -64,8 +64,39 @@ header, body, footer{
         margin-bottom:0px;
 }
 
+.smartphone_headerContainer, .tablet_headerContainer, footer{
+        background-color: rgb(239, 244, 248);
+        animation-name:NavFootBackgroundColor;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+}
+
+@keyframes NavFootBackgroundColor{
+        0% {background-color: rgb(239, 244, 248);}
+        25% {background-color:rgb(176, 212, 241);}
+        50% {background-color: rgb(85, 171, 241);}
+        75% {background-color:rgb(14, 140, 243);}
+        100% {background-color: rgb(239, 244, 248);}
+}
+
+.headerTitle, .headerListItem, .homeIcon, footer i, footer li, footer span{
+        color: #333;
+        animation-name:headerFooterColor;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+}
+
+@keyframes headerFooterColor{
+        0% {color: #333;}
+        25% {color:rgb(65, 63, 63);}
+        50% {color: rgb(202, 201, 201);}
+        75% {color:rgb(250, 247, 247);}
+        100% {color: #333;}
+}
+
 .tablet_headerContainer{
         display:none;
+        z-index:1;
 }
 
 @media (min-width:425px){
@@ -95,7 +126,7 @@ header, body, footer{
                 align-items: center;
                 flex-direction: row;
                 width: 100%;
-                border-bottom: 1px solid black;
+                /* border-bottom: 1px solid black; */
                 padding: 20px auto;
                 height:10vh;
                 top:0px;
@@ -160,7 +191,7 @@ header, body, footer{
 /* Index.ejs */
 .bodyContainer{
         height:auto;
-        border-bottom: 1px solid black;
+        /* border-bottom: 1px solid black; */
         position:relative;
         top:16vh;
 }
@@ -271,6 +302,10 @@ header, body, footer{
 }
 
 @media (min-width:1440px){
+        .container img{
+                height:170px;
+        }
+
         .featureListContainer h4{     
                         font-size:2.2rem
         }
@@ -309,7 +344,7 @@ header, body, footer{
 
 @media (min-width:1024px){
         .footerContainer{
-                bottom:-58px;
+                bottom:-57px;
                 font-size:2rem;
                 text-align: center;
                 height:12vh;
