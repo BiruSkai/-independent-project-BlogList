@@ -1,0 +1,343 @@
+/* General */
+header, body, footer{
+        margin:0;
+        font-family: serif, sans-serif;
+}
+
+/* Header */
+/* smartphone */
+.smartphone_headerContainer {
+        position:fixed;
+        display:block;
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding: 20px auto;
+        height:fit-content;
+        top:0px;
+        z-index:1;
+}
+
+.firstRowHeader{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding:10px 5px;
+        border-bottom:1px solid black;
+        >.headerTitle{
+                flex:1;
+                margin-left: 10px;
+                margin-right:5px;
+                font-size: 2rem;
+                font-weight:bolder;
+        }
+        >.searchBarContainer{
+                flex:1;
+                position:relative;
+                >input{
+                        width:90%;
+                        margin-right:10px;
+                        padding: 5px 5px;
+                        padding-right:28px;
+                        height: 3rem;
+                        border-radius: 10px;
+                }
+                >button{
+                        position:absolute;
+                        right:20px;
+                        top:5px;
+                        background-color: white;
+                        border:none;
+                }
+                >button:hover{
+                        background-color: yellow;
+                }
+        }
+}
+
+.secondRowHeader{
+        list-style: none;
+        display:flex;
+        justify-content:space-around;
+        align-items: center;
+        padding: 10px 5px;
+        font-size: 1.5rem;
+        margin-bottom:0px;
+}
+
+.tablet_headerContainer{
+        display:none;
+}
+
+@media (min-width:425px){
+        .firstRowHeader .searchBarContainer button{
+                right: 25px;
+        }
+}
+
+@media (min-width:768px ) and (max-width:1024px){
+        .firstRowHeader .headerTitle{
+                margin-left:20%;
+                font-size:3rem;
+        }
+        .firstRowHeader .searchBarContainer input{
+                width: 60%;
+                margin-left:10%
+        }
+        .firstRowHeader .searchBarContainer button{
+                right: 32%;
+        }
+}
+
+@media (min-width:1024px){
+        .tablet_headerContainer {
+                position:fixed;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                width: 100%;
+                border-bottom: 1px solid black;
+                padding: 20px auto;
+                height:10vh;
+                top:0px;
+        }
+        
+        .headerTitle{
+                flex: 1;
+                font-size: 3rem;
+                margin-left: 2rem;
+                letter-spacing: 2px;
+                font-weight: 900;
+        }
+        
+        .searchBarContainer{
+                flex: 1;
+                >input{
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                        width:90%;
+                }
+                >button{
+                        position:absolute;
+                        right:39%;
+                        top:12px;
+                        background-color: white;
+                        border:none;
+                        font-size: 2rem;
+                        border-radius:50%;
+                }
+                >button:hover{
+                        background-color: yellow;
+                }
+        }
+        
+        .headerListContainer{
+                flex: 1;
+                font-size:1.7rem;
+                list-style: none;
+                display:flex;
+                >li{
+                        margin: 0 1.5rem;
+                        font-weight: 600;
+                }
+        }
+}
+
+@media (min-width:1440px){
+        .headerListContainer{
+                font-size:2.2rem;
+        }
+
+        .searchBarContainer input{
+                font-size:2rem;
+        }
+
+        #magnifyGlassIcon{
+                top:25px;
+        }
+}
+
+
+/* Index.ejs */
+.bodyContainer{
+        height:auto;
+        border-bottom: 1px solid black;
+        position:relative;
+        top:16vh;
+}
+
+.bodyContainer h3{
+        font-weight: bolder;
+        margin-top:0px;
+        padding-top:10px;
+}
+
+.descriptionContent{
+        text-wrap:balance;
+        font-size:1.5rem;
+        text-align: left;
+}
+
+.imageInDescription{
+        height:150px;
+        width:50%;
+        border-radius:50%;
+}
+
+.featureMainContainer{
+        padding-top:20px;
+        >h3{
+                text-align: center;
+        }
+}
+
+.featureListContainer{
+        display:flex;
+        flex-direction: column;
+        padding: 0px 15px;
+}
+
+.featureListContainer h4{
+        font-weight:600;
+}
+
+.featureListContainer p{
+        font-size:1.5rem;
+        padding-left:20px;
+}
+
+.languageListContainer{
+        display:flex;
+        justify-content: space-around;
+        padding: 0px 20px;
+        padding-bottom:30px;
+}
+
+@media (min-width:768px) and (max-width:1024px){
+        .bodyContainer{
+                top:20vh;
+        }
+}
+
+@media (min-width:1024px){
+        .smartphone_headerContainer{
+                display:none;
+        }
+
+        .searchBarContainer button{
+                top:13px;
+        }
+
+        .bodyContainer{
+                top:10vh;
+                height:auto;
+                padding-bottom:0;
+        }
+
+        .bodyContainer h3{
+                padding-top:20px;
+        }
+
+        .container{
+                position:relative;
+                z-index: -1;
+                margin-top:20px;
+        }
+
+        .descriptionContentContainer{
+                text-align: left;
+                padding:0 100px;
+        }
+
+        .descriptionContent{
+                display:inline;
+        }
+
+        .featureListContainer{
+                padding: 0 100px;
+                flex-direction:row;
+                >div{
+                        margin:0 10px;     
+                        >p{  
+                                text-align: justify;
+                        }
+                }
+                
+        }
+}
+@media (min-width:1200px){
+        .descriptionContent{
+                font-size: 2rem;
+        }
+}
+
+@media (min-width:1440px){
+        .featureListContainer h4{     
+                        font-size:2.2rem
+        }
+
+         .featureListContainer p {
+                font-size: 2rem;
+                padding-left:25px;
+         }
+
+         .languageListContainer h4{
+                font-size: 2.2rem;
+        }
+}
+
+/* footer.ejs */
+.footerContainer{
+        display: inline-flex;
+        justify-content:space-evenly;
+        align-items: center;
+        position: relative;
+        bottom: -90px;
+        width: 100%;
+        height: 10vh;
+        font-size: 1.5rem;
+}
+
+.socialMediaIcon{
+        font-size: 2rem;
+}
+
+@media (min-width:768px){
+        .footerContainer{
+                bottom: -111px;
+        }
+}
+
+@media (min-width:1024px){
+        .footerContainer{
+                bottom:-58px;
+                font-size:2rem;
+                text-align: center;
+                height:12vh;
+        }
+
+        .socialMediaIcon{
+                font-size:3rem;
+        }
+}
+
+@media (min-width:1200px){
+        .footerContainer{
+                bottom:-75px;
+                height:100px;
+        }
+
+        .bodyContainer h3{
+                margin-bottom: 30px;
+                padding-top:30px;
+        }
+
+        .descriptionContent{     
+                text-align: start;
+                margin-left: 20px;
+        }
+
+        .imageInDescription{
+                border-radius: 0%;
+        }
+
+}

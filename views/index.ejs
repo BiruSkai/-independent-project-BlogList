@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Capstone Project</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="styles/index.css">
+
+</head>
+
+
+<body>
+        <%- include("partials/header.ejs") %>
+        
+        <div class="bodyContainer">
+                <div class="px-4 pt-5 my-5 text-center border-bottom">
+                        <h3 class="display-4 fw-bold text-body-emphasis">Project Description</h3>
+                        <div class="col-lg-6 mx-auto descriptionContentContainer">
+                                <p class="lead mb-4 descriptionContent">
+                                The goal of this project is to create a Blog web application using Node.js, Express.js, and EJS. 
+                                The application will allow users to create and view blog posts. 
+                                Posts will not persist between sessions as no database will be used in this version of the application. 
+                                Styling will be an important aspect of this project to ensure a good user experience.
+                                </p>
+                        </div>
+                        <div class="overflow-hidden " style="max-height: 30vh;">
+                                <div class="container px-5">
+                                        <img src="images/project_plan.jpg" class="img-fluid border rounded-3 shadow-lg mb-4 imageInDescription" alt="project image" width="700" height="500" loading="lazy">
+                                </div>
+                        </div>
+                </div>
+
+                <div class="featureMainContainer">
+                        <h3>Features</h3>
+                        <div class="featureListContainer">
+                                <div>
+                                        <h4><span><i class="bi bi-pen-fill"></i>&nbsp;</span>Post Creation</h4>
+                                        <p>Users are able to create a new post.</p>
+                                </div>
+                                <div>
+                                        <h4><span><i class="bi bi-book-fill"></i>&nbsp;</span>Post Viewing</h4>
+                                        <p>Users are able to view current session posts.</p>
+                                </div>
+                                <div>      
+                                        <h4><span><i class="bi bi-arrow-clockwise"></i>&nbsp;</span>Post Update/Delete</h4>
+                                        <p>Users are able to to update or delete their current session posts.</p>
+                                </div>
+                                <div>        
+                                        <h4 class="fs-2 text-body-emphasis"><span><i class="bi bi-filetype-css"></i>&nbsp;</span>Styling</h4>
+                                        <p>The project is responsive from s-sized mobile to desktop.</p>
+                                </div>
+                        </div>
+                </div>
+
+                <div class="featureMainContainer">
+                        <h3>Programming Languages</h3>
+                        <div class="languageListContainer">
+                                
+                                        <h4 class="languge">Html & css</h4>
+                                
+                                        <h4 class="languge">Node js & express js</h4>
+                                    
+                                        <h4 class="languge">EJS</h4>
+                                
+                        </div>
+                </div>
+        </div>
+       
+        <%- include("partials/footer.ejs") %>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
