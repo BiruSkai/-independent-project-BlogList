@@ -428,3 +428,27 @@ header, body, footer{
                 font-size: 2rem;
         }
 }
+
+/* view_blogs.ejs */
+.viewBlogContainer {
+        top: 90px;
+        position: relative;
+        height: 66vh;
+        padding: 0 20px;
+    }
+
+.cardUl{
+        padding: 0;
+}
+
+.listCard{
+        list-style:none;
+        border:1px solid #a3a0a0;
+        padding: 10px;
+        border-radius:10px;
+        margin: 10px auto;
+}
+
+.readButton{
+        color:#333;
+}
