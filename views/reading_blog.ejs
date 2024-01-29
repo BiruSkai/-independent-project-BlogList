@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+
+<div id="readingBlogContainer" class="viewTitleContainer">
+        <h4><%= blogList.title %></h4>
+        <p><small>Posted at <i><%= blogList.time %></i></small></p>
+        <p><%= blogList.blog %></p><br/>
+        <a class="btn btn-info" href="/view_titles">Back</a>
+</div>
+
+<%- include("partials/footer.ejs") %>

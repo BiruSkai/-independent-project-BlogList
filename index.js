@@ -14,8 +14,15 @@ app.get("/", (req, res) => {
         res.render("index.ejs")
 })
 
-app.get("/view_blogs", (req, res) => {
-        res.render("view_blogs.ejs", {blogList})
+app.get("/view_titles", (req, res) => {
+        res.render("view_titles.ejs", {blogList})
+})
+
+app.get('/reading_blog/:index', (req, res) => {
+        let index = req.params.index;
+        console.log("index: " + index);
+        
+        res.render("reading_blog.ejs", {blogList: blogList[index]});
 })
 
 app.get("/write_blog", (req, res) => {
@@ -25,7 +32,6 @@ app.get("/write_blog", (req, res) => {
 app.post("/write_blog", (req, res) => {
         
         let time = `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`;
-        console.log("time" + time)
 
         const{title, blog} = req.body;
         let userInput = {time:time, title:title, blog:blog};
@@ -33,7 +39,7 @@ app.post("/write_blog", (req, res) => {
         blogList.push(userInput)
         console.log(blogList)
 
-        res.render("view_blogs.ejs", {blogList})
+        res.render("view_titles.ejs", {blogList})
 })
 
 app.listen(port, () => {

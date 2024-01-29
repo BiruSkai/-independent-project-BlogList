@@ -79,7 +79,7 @@ header, body, footer{
         100% {background-color: rgb(239, 244, 248);}
 }
 
-.headerTitle, .headerListItem, .navIcon a, footer i, footer li, footer span{
+.headerTitle, .headerListItem, .navIcon, footer i, footer li, footer span{
         
         color: #333;
         animation-name:headerFooterColor;
@@ -127,8 +127,6 @@ header, body, footer{
                 align-items: center;
                 flex-direction: row;
                 width: 100%;
-                /* border-bottom: 1px solid black; */
-                padding: 20px auto;
                 height:10vh;
                 top:0px;
         }
@@ -144,6 +142,7 @@ header, body, footer{
         .searchBarContainer{
                 flex: 1;
                 >input{
+                        font-size:1.7rem;
                         border-radius: 10px;
                         padding: 5px 10px;
                         width:90%;
@@ -151,7 +150,7 @@ header, body, footer{
                 >button{
                         position:absolute;
                         right:39%;
-                        top:13px;
+                        top:29px;
                         background-color: white;
                         border:none;
                         font-size: 2rem;
@@ -164,7 +163,7 @@ header, body, footer{
         
         .headerListContainer{
                 flex: 1;
-                font-size:1.7rem;
+                font-size:1.9rem;
                 list-style: none;
                 display:flex;
                 >li{
@@ -184,7 +183,7 @@ header, body, footer{
         }
 
         #magnifyGlassIcon{
-                top:21px;
+                top:29px;
         }
 }
 
@@ -204,7 +203,6 @@ header, body, footer{
 }
 
 .descriptionContent{
-        text-wrap:balance;
         font-size:1.5rem;
         text-align: left;
 }
@@ -345,10 +343,10 @@ header, body, footer{
 
 @media (min-width:1024px){
         .footerContainer{
-                bottom:-57px;
+                bottom:-105px;
                 font-size:2rem;
                 text-align: center;
-                height:12vh;
+                height:10vh;
         }
 
         .socialMediaIcon{
@@ -359,7 +357,10 @@ header, body, footer{
 @media (min-width:1200px){
         .footerContainer{
                 bottom:-75px;
-                height:100px;
+                height:10vh;
+                >div{
+                        font-size:2.5rem;
+                }
         }
 
         .bodyContainer h3{
@@ -379,7 +380,7 @@ header, body, footer{
 }
 
 /* writeBlog's body */
-.writeBlog{
+#writeBlog{
         margin:17px;
         >h3{
                 text-align: center;
@@ -406,35 +407,46 @@ header, body, footer{
 }
 
 @media (min-width:768px){
-        .writeBlog form{
-                padding:20px 80px;
+        #writeBlog {
+                >form{
+                        padding:20px 80px;
+                }
+        }
+
+        #writeBlog input, #writeBlog textarea{
+                font-size: 1.5rem;
         }
 }
 
 @media (min-width:1024px){
-        .writeBlog form{
+        #writeBlog{
+                height: 72vh;
+        }
+
+        #writeBlog form{
                 padding:20px 120px;
         }
 }
 
 @media (min-width:1440px){
-        .writeBlog {
+        #writeBlog {
                 font-size:2rem;
+                height:78vh;
                 >form{
                         padding:20px 250px;
                 }
         }
-        .writeBlog input, .writeBlog textarea{
+        #writeBlog input, #writeBlog textarea{
                 font-size: 2rem;
         }
 }
 
-/* view_blogs.ejs */
-.viewBlogContainer {
-        top: 90px;
+/* view_titles.ejs */
+.viewTitleContainer {
+        top: 16vh;
         position: relative;
-        height: 66vh;
-        padding: 0 20px;
+        height: 70vh;
+        padding: 10px 20px;
     }
 
 .cardUl{
@@ -443,12 +455,53 @@ header, body, footer{
 
 .listCard{
         list-style:none;
-        border:1px solid #a3a0a0;
         padding: 10px;
         border-radius:10px;
         margin: 10px auto;
+        background-color: aliceblue;
+        border: none;
+}
+
+.listCard:hover{
+        border:1px solid #619cc4;
 }
 
 .readButton{
         color:#333;
+}
+
+@media (min-width:768px){
+        .viewTitleContainer{
+                height:71vh;
+                top:18vh;
+                padding:10px 100px;
+        }
+}
+
+@media (min-width:1024px){
+        .viewTitleContainer{
+                height:77vh;
+                padding:10px 180px;
+        }
+}
+
+@media (min-width:1440px){
+        .viewTitleContainer{
+                height:82vh;
+                padding:10px 180px;
+        }
+}
+
+/* reading_blog.ejs */
+@media (min-width:1024px){
+        #readingBlogContainer{
+                top: 10vh;
+                padding-top: 5vh;
+        }
+}
+
+@media (min-width:1440px){
+        #readingBlogContainer{
+                padding: 5vh 280px;
+        }
 }

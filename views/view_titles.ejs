@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<div class="viewTitleContainer">
+
+        <!-- <% function deleteBlog(index){ %>
+                <% let filterItem = blogList.filter(blogList[index]) %>
+                <% console.log("filterItem: " + filterItem) %>
+                <% blogList = blogList.map( item => {item !== filterItem}) %>
+                <% console.log("new blogList: " + blogList) %>
+        <% } %> -->
+
+        <% const listLength = locals.blogList.length %>
+        <% if (listLength > 0) { %>
+                <h4>Current Titles:</h4>
+                <ul class="cardUl">
+                        <% blogList.map((item, index) => { %>
+                                <li key= <%= index %> class="listCard"> 
+                                        <div class="card-body">
+                                                <h5 class="card-title"><span><%= index + 1 %>.&nbsp;</span> <%= item.title %> </h5>
+                                                <small> posted at <%= item.time %> </small><br>
+                                                <button class="btn btn-info readButton"><a href="/reading_blog/<%= index %>" >Read blog</a></button>
+                                                <button class="btn btn-primary">Update</button>
+                                                <button class="btn btn-danger" %> >Delete</button>
+                                        </div>
+                                </li>
+                        <% }) %>   
+                </ul>            
+        <% } else { %>
+                <h4>Blog is still empty. We would like to hear your blog.</h4>
+        <% } %>    
+</div>
+
+<%- include("partials/footer.ejs") %>
