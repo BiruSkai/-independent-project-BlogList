@@ -4,6 +4,11 @@ header, body, footer{
         font-family: serif, sans-serif;
 }
 
+body{
+        display: flex;
+        flex-direction: column;
+}
+
 /* Header */
 /* smartphone */
 .smartphone_headerContainer {
@@ -150,7 +155,7 @@ header, body, footer{
                 >button{
                         position:absolute;
                         right:39%;
-                        top:29px;
+                        top:18px;
                         background-color: white;
                         border:none;
                         font-size: 2rem;
@@ -324,8 +329,8 @@ header, body, footer{
         display: inline-flex;
         justify-content:space-evenly;
         align-items: center;
-        position: relative;
-        bottom: -115px;
+        position: absolute;
+        bottom: 0px;
         width: 100%;
         height: 10vh;
         font-size: 1.5rem;
@@ -337,13 +342,13 @@ header, body, footer{
 
 @media (min-width:768px){
         .footerContainer{
-                bottom: -111px;
+                /* bottom: -111px; */
         }
 }
 
 @media (min-width:1024px){
         .footerContainer{
-                bottom:-105px;
+                /* bottom:-105px; */
                 font-size:2rem;
                 text-align: center;
                 height:10vh;
@@ -356,7 +361,7 @@ header, body, footer{
 
 @media (min-width:1200px){
         .footerContainer{
-                bottom:-75px;
+                /* bottom:-75px; */
                 height:10vh;
                 >div{
                         font-size:2.5rem;
@@ -445,8 +450,9 @@ header, body, footer{
 .viewTitleContainer {
         top: 16vh;
         position: relative;
-        height: 70vh;
+        height: 74vh;
         padding: 10px 20px;
+        overflow: scroll;
     }
 
 .cardUl{
@@ -480,14 +486,14 @@ header, body, footer{
 
 @media (min-width:1024px){
         .viewTitleContainer{
-                height:77vh;
+                top:10vh;
+                height:80vh;
                 padding:10px 180px;
         }
 }
 
 @media (min-width:1440px){
         .viewTitleContainer{
-                height:82vh;
                 padding:10px 180px;
         }
 }
