@@ -5,11 +5,11 @@
                 <form action="/write_blog" method="POST">
                         <div>
                                 <label for="title">Title:</label></br>
-                                <input type="text" name="title" class="form-control" value="<%= locals.blogData? blogData.title:"" %>"/>
+                                <input type="text" id="title" name="title" class="form-control" value="<%= locals.blogData? blogData.title:"" %>"/>
                         </div>
                         <div>
-                                <label for="title">Blog:</label></br>
-                                <textarea name="blog" rows="8" class="form-control"><%= locals.blogData? blogData.blog:"" %></textarea>
+                                <label for="blog">Blog:</label></br>
+                                <textarea id="blog" name="blog" rows="8" class="form-control"> value="<%= locals.blogData? blogData.blog:"" %>"></textarea>
                         </div>  
                         <div>
                                 <input hidden value="<%= locals.index? index:"" %>" name="index">
